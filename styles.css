@@ -1,0 +1,141 @@
+/* Style for the body element, including background gradient and padding */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom right, #00f, #000); /* Gradient background */
+    min-height: 100vh; /* Ensure the gradient covers the entire viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 20px;
+    color: white;
+}
+
+/* Style for the main header */
+h1 {
+    color: white;
+}
+
+/* Style for the input field */
+#new-todo {
+    width: 60%;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 10px; /* Adjusted rounded corners */
+    border: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
+}
+
+/* Style for the add button */
+#add-todo {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px; /* Adjusted rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
+}
+
+/* Style for the unordered list */
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Style for each list item */
+#todo-list li {
+    background-color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Increased shadow */
+    border-radius: 10px; /* Adjusted rounded corners */
+    transition: background-color 0.3s;
+    color: black;
+    word-wrap: break-word; /* Ensure long text wraps within the list item */
+}
+
+/* Change background color on hover for list items */
+#todo-list li:hover {
+    background-color: #a6afaa;
+}
+
+/* Style for the text of each to-do item */
+.todo-text {
+    flex-grow: 1; /* Allow the text to grow and fill available space */
+    margin-left: 10px; /* Add margin to the left of the text */
+    overflow-wrap: break-word; /* Ensure long words break and wrap within the list item */
+}
+
+/* Style for the action icons (edit and delete) */
+.todo-actions {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items in the center */
+    flex-shrink: 0; /* Prevent icons from shrinking when text is too long */
+}
+
+/* Style for each icon */
+.todo-actions i {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin-left: 10px; /* Add margin to the left of each icon */
+    color: red; /* Red color for the icons */
+}
+
+/* Style for the summary section */
+.summary {
+    margin-top: 20px; /* Add margin to the top of the summary section */
+}
+
+/* Style for the checkboxes */
+.checkbox {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    flex-shrink: 0; /* Prevent checkbox from shrinking when text is too long */
+}
+
+/* Style for the edit input field */
+.edit-input {
+    flex-grow: 1; /* Allow the input to grow and fill available space */
+    margin-left: 10px; /* Add margin to the left of the input field */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    /* Adjust the width of the input field and button for smaller screens */
+    #new-todo {
+        width: 80%; /* Set the width to 80% for mobile devices */
+    }
+
+    #add-todo {
+        width: 80%; /* Set the width to 80% for mobile devices */
+        margin-top: 10px; /* Add margin to the top of the button */
+    }
+
+    /* Adjust the list item to wrap text and icons properly */
+    #todo-list li {
+        flex-direction: column; /* Stack text and actions vertically on mobile */
+        align-items: flex-start; /* Align items to the start */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .todo-text {
+        margin-left: 0; /* Remove left margin for mobile */
+        margin-bottom: 10px; /* Add margin below text */
+    }
+
+    .todo-actions {
+        flex-direction: row; /* Keep icons in a row */
+        justify-content: flex-end; /* Align icons to the right */
+        width: 100%; /* Make the actions span full width */
+        margin-top: 10px; /* Add margin to the top of actions span */
+    }
+
+    .edit-input {
+        margin-left: 0; /* Remove left margin for mobile */
+        width: 100%; /* Make the edit input full width */
+    }
+}
